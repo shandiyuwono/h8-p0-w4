@@ -4,7 +4,12 @@ function ubahHuruf(kata) {
     var output = ""
     for(var i = 0; i <= kata.length-1; i++) {
         var indexKata = alphabet.indexOf(kata[i])
+        if(kata[i] === "z") {
+            output += "a"
+        } 
+        else{
         output += alphabet[indexKata+1]
+        }
     }
     return output
   }
