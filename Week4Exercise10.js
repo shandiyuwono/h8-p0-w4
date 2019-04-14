@@ -1,37 +1,27 @@
 function changeMe(arr) {
     // you can only write your code here!
+
+    for(var i = 0; i <= arr.length-1; i++) {
+        console.log( i + 1 + ". " + arr[i][0] + " " +  arr[i][1] + ":")
+        var obj = {
+            firstName: arr[i][0],
+            lastName: arr[i][1],
+            gender: arr[i][2],
+            age: 0
+        }
+
+        if(arr[i][3] === undefined) {
+            obj.age = "Invalid Birth Year"
+        }
+        else {
+        obj.age = 2019 - arr[i][3]
+        }
     
-    if(arr.length < 1) {
-        console.log("\"\"")
-    }
 
-    else{ 
-    if(arr[0][3] > 2019 || arr[0] === "") {
-        var age = "Invalid Birth Year"
-    } else {
-        var age = 2019 - arr[0][3]
+        console.log(obj)
     }
-    
-    arr1 = {
-        firstName: arr[0][0],
-        lastName: arr[0][1],
-        gender: arr[0][2],
-        age: age  
-    }
-
-    arr2 = {
-        firstName: arr[1][0],
-        lastName: arr[1][1],
-        gender: arr[1][2],
-        age: age 
-    }
-    console.log("1. " + arr[0][0] + " " + arr[0][1] + ":")
-    console.log(arr1)
-
-    console.log("2. " + arr[1][0] + " " + arr[1][1] + ":")
-    console.log(arr2)
-}
-}
+  }
+  
   // TEST CASES
   changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]); 
   // 1. Christ Evans:
