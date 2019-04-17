@@ -9,7 +9,7 @@ function naikAngkot(arrPenumpang) {
         var bayar = 0
         var obj = {}
         for(var j = 0; j <= arrPenumpang[i].length-1; j++) {
-            bayar = (rute.indexOf(arrPenumpang[i][2]) - rute.indexOf(arrPenumpang[i][1])) * 2000
+            bayar = Math.abs((rute.indexOf(arrPenumpang[i][2]) - rute.indexOf(arrPenumpang[i][1]))) * 2000
             obj["penumpang"] = arrPenumpang[i][0]
             obj["naikDari"] = arrPenumpang[i][1]
             obj["tujuan"] = arrPenumpang[i][2]
